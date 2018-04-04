@@ -1,0 +1,32 @@
+#include <iostream.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+#include <math.h>
+#include <iomanip.h>
+
+#define br getch();
+
+//#global_variables
+char name[20], school_name[50];
+int cbc;
+
+void ()
+{
+
+}
+
+void main()
+{
+clrscr();
+cout<<" *** CyberBuzz 2k18 : Programming *** "<<endl;
+cout<<"Enter your school name ";
+gets(school_name);
+cout<<endl<<
+
+
+
+
+getch();
+}
