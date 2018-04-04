@@ -1,0 +1,66 @@
+#include <iostream.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+#include <math.h>
+#include <iomanip.h>
+#include <time.h>
+
+#define br getch();
+
+//#global_variables
+
+void ()
+{
+
+}
+
+void main()
+{
+clrscr();
+
+//**********************************************************
+
+time_t timer;
+  struct tm y2k = {0};
+  double seconds;
+
+  y2k.tm_hour = 0;   y2k.tm_min = 0; y2k.tm_sec = 0;
+  y2k.tm_year = 100; y2k.tm_mon = 0; y2k.tm_mday = 1;
+
+  time(&timer);  /* get current time; same as: timer = time(NULL)  */
+
+  seconds = difftime(timer,mktime(&y2k));
+  
+//**********************************************************  
+  
+cout<<" *** CyberBuzz 2k18 : Programming *** "<<endl; br
+cout<<"** Level 1 **"<<endl; br
+//*****************************
+double first,timeout_1;
+
+cout<<"Your first question:- "<<endl;
+cout<<"There is no penalty for wrong answer in this question"<<endl; br
+cout<<"Find the output of the following question and enter the answer"<<endl;
+cout<<endl<<"What is 1+1?";
+a:
+cout<<"Type the answer: ";
+cin>>first;
+if (first==2)
+cout<<"Correct!"<<endl;
+else
+{
+cout<<"Wrong Answer! You have been locked out for 10 seconds!"<<endl;
+seconds = difftime(timer,mktime(&y2k));
+timeout_1=seconds+10;
+while(seconds<timeout)
+{
+}
+cout<<endl<<endl<<"10 seconds have elapsed!";
+goto a;
+}
+
+cout<<"Second Question"; br
+getch();
+}
