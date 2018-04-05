@@ -11,10 +11,6 @@
 
 //#global_variables
 
-void ()
-{
-
-}
 
 void main()
 {
@@ -36,11 +32,11 @@ time_t timer;
 //**********************************************************  
   
 cout<<" *** CyberBuzz 2k18 : Programming *** "<<endl; br
-cout<<"** Level 1 **"<<endl; br
+cout<<" ** Level 1 **"<<endl; br
 //*****************************
-double first,timeout_1;
+double first,timeout;
 
-cout<<"Your first question:- "<<endl;
+cout<<endl<<"Your first question:- "<<endl;
 cout<<"There is no penalty for wrong answer in this question"<<endl; br
 cout<<"Find the output of the following question and enter the answer"<<endl;
 cout<<endl<<"What is 1+1?";
@@ -52,12 +48,16 @@ cout<<"Correct!"<<endl;
 else
 {
 cout<<"Wrong Answer! You have been locked out for 10 seconds!"<<endl;
+time(&timer);
 seconds = difftime(timer,mktime(&y2k));
-timeout_1=seconds+10;
+
+timeout=seconds+10;
 while(seconds<timeout)
 {
+time(&timer);
+seconds = difftime(timer,mktime(&y2k));
 }
-cout<<endl<<endl<<"10 seconds have elapsed!";
+cout<<endl<<"10 seconds have elapsed!"<<endl; br
 goto a;
 }
 
