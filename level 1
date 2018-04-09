@@ -6,6 +6,7 @@
 #include <math.h>
 #include <iomanip.h>
 #include <time.h>
+#include <string.h>
 
 #define br getch();
 
@@ -46,7 +47,7 @@ cout<<endl<<"try(b;a);";
 cout<<endl<<" getch(); }";
 cout<<endl<<endl<<"void try(int x,int &y,int z) {";
 cout<<endl<<"q=20; q+=x+y+z;";
-cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }"
+cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }";
 
     // ***
 
@@ -55,7 +56,7 @@ cout<<"Type the answer: ";
 cin>>first;
 
     // *** Answer 1
-if (first==11
+if (first==11)
     // ***
 
 cout<<"Correct!"<<endl;
@@ -137,6 +138,6 @@ clrscr();
 cout<<endl<<"Your last question (for this level):- "<<endl;
 cout<<"There IS penalty for wrong answer in this question"<<endl; br
 cout<<"Question to be added";
-
-getch();
+}
+br
 }
