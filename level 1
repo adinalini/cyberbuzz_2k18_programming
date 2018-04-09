@@ -70,7 +70,7 @@ else
 // ******************************
 
 char resp2,resp2_2[20];
-
+clrscr();
 cout<<endl<<"Your second question:- "<<endl;
 // *** Question 2
 cout<<"Do you know anyone by the name Bjarne Stroustrup? (y-yes/n-no) "<<endl;
@@ -79,11 +79,29 @@ cout<<"Do you know anyone by the name Bjarne Stroustrup? (y-yes/n-no) "<<endl;
 cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
-{
-  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe) ";
+{c:
+  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe) (be specific!) ";
   gets(resp2_2);
   
-  if(strcmp(resp2_2,"C++")==0)
+  if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
+  {
+    cout<<":P Gr8 Only one question left for this level"<<endl; br
+  }
+  else
+  {
+    cout<<"Bro, WE HATE LIARS!! YOU HAVE BEEN LOCKED OUT FOR 5 MINUTES!! "; br
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+    timeout=seconds+300;
+    while(seconds<timeout)
+   {
+    cout<<"Liar! Liar! Pants on Fire!!"<<endl;
+    time(&timer);
+      seconds = difftime(timer,mktime(&y2k));
+   }
+   
+cout<<endl<<"5 minutes have elapsed!"<<endl; br
+  }
 }
 else
 {
@@ -96,11 +114,22 @@ else
     time(&timer);
     seconds = difftime(timer,mktime(&y2k));
   }
-  
+  char resp_3;
 cout<<endl<<"2 minutes have elapsed!"<<endl; br
-
-
+cout<<endl<<"We are giving you ONE LAST CHANCE, would you like to attempt the question?"<<endl;
+cout<<"P.S.- We will throw in a bonus HINT!(y-yes/n-no) ";
+cin>>resp_3;
+if(resp_3=='y')
+goto c;
+else
+{
+cout<<"Ok! You should've known this :( He created C++!!"<<endl; br
+}
 // *************
+clrscr();
+cout<<endl<<"Your last question (for this level):- "<<endl;
+cout<<"There IS penalty for wrong answer in this question"<<endl; br
+cout<<""<<endl;
 
 getch();
 }
