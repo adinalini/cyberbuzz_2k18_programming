@@ -1,1 +1,73 @@
-//create
+#include <iostream.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+#include <math.h>
+#include <iomanip.h>
+#include <time.h>
+#include <string.h>
+
+#define br getch();
+
+void main()
+{
+clrscr();
+
+//**********************************************************
+
+time_t timer;
+struct tm y2k = {0};
+double seconds;
+
+y2k.tm_hour = 0;   y2k.tm_min = 0; y2k.tm_sec = 0;
+y2k.tm_year = 100; y2k.tm_mon = 0; y2k.tm_mday = 1;
+
+time(&timer);  /* get current time; same as: timer = time(NULL)  */
+
+seconds = difftime(timer,mktime(&y2k));
+  
+//**********************************************************   
+cout<<" *** CyberBuzz 2k18 : Surprise Event *** "<<endl; br
+//*****************************
+
+cout<<" ** Round 2**"<<endl; br
+double timeout;
+
+//************************************************************************************
+double answer_1,answer_2;
+
+cout<<endl<<"Your x question:- "<<endl;
+cout<<"There IS x penalty for wrong answer in this question"<<endl;
+cout<<"abc"<<endl;
+
+    // *** Question 1
+cout<<endl<<" Question goes here";
+   // ***
+
+a:
+cout<<"Type the answer: ";
+cin>>answer_1;
+
+    // *** Answer 1
+if (answer_1==11)
+    // ***
+
+cout<<"Correct!"<<endl;
+else
+{
+  cout<<"Wrong Answer! You have been locked out for x seconds!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+x;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  cout<<endl<<"x seconds have elapsed!"<<endl; br
+  goto a;
+}
+
+br
+}
