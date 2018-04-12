@@ -48,7 +48,7 @@ cout<<endl<<" getch(); }";
 cout<<endl<<endl<<"void try(int x,int &y,int z) {";
 cout<<endl<<"q=20; q+=x+y+z;";
 cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }";
-
+cout<<endl<<endl;
     // ***
 
 a:
@@ -97,7 +97,7 @@ if (resp2=='y')
   }
   else
   {
-    cout<<"Bro, WE HATE LIARS!! YOU HAVE BEEN LOCKED OUT FOR 5 MINUTES!! "; br
+    cout<<"Bro, WE HATE LIARS!! YOU HAVE BEEN LOCKED OUT FOR 5 MINUTES!! .......press enter"; br
     time(&timer);
     seconds = difftime(timer,mktime(&y2k));
     timeout=seconds+300;
@@ -135,9 +135,70 @@ cout<<"Ok! You should've known this :( He created C++!!"<<endl; br
 }
 // *************
 clrscr();
-cout<<endl<<"Your last question (for this level):- "<<endl;
-cout<<"There IS penalty for wrong answer in this question"<<endl; br
-cout<<"Question to be added";
+
+cout<<endl<<"Your second last question (for this level):- "<<endl;
+cout<<"There IS small penalty for wrong answer in this question"<<endl; br
+cout<<endl<<"int swa = 7; void main() {"<<endl;
+cout<<"int a=1; const int swa =4; "<<endl;
+cout<<"for(int i=0;i<4;i++) {"<<endl;
+cout<<"if(i%2==0) a*=swa;"<<endl;
+cout<<"else a+=::swa; }"<<endl;
+cout<<"cout<<a; }"<<endl;
+int resp_3;
+d:
+cout<<"Type the answer: ";
+cin>>resp_3;
+
+    // *** Answer 3
+if (resp_3==51)
+    // ***
+
+cout<<"Correct!"<<endl; br
+else
+{
+  cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+20;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  cout<<endl<<"20 seconds have elapsed!"<<endl; br
+  goto d;
+}
+clrscr();
+
+cout<<"LAST one :P Next level will be amazing!"<<endl; br
+cout<<"There is NO penalty in this round :)"<<endl<<endl; br
+
+//*******************************************
+
+cout<<" ";
+cout<<" ";
+cout<<" ";
+cout<<" ";
+cout<<" ";
+cout<<" ";
+cout<<" ";
+
+char resp_4[40];
+e:
+cout<<"Type the answer: ";
+gets(resp_4);
+
+    // *** Answer 1
+if ((strcmp(resp_4," ")==0)||(strcmp(resp_4," ")==0))
+    // ***
+
+cout<<"Yess!"<<endl; br
+else
+{
+  goto e;
+}
+cout<<"Now we will print the password for next file, make sure others don't see it, PRESS ENTER"<<endl; br
+cout<<"lovefortnite";
 }
 br
 }
