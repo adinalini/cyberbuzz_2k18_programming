@@ -171,17 +171,19 @@ else
 clrscr();
 
 cout<<"LAST one :P Next level will be amazing!"<<endl; br
-cout<<"There is NO penalty in this round :)"<<endl<<endl; br
+cout<<"There is NO penalty in this round"<<endl<<endl; br
+cout<<"You CAN USE 40 points to pass this level ;)"<<endl<<endl; br
 
 //*******************************************
 
-cout<<" ";
-cout<<" ";
-cout<<" ";
-cout<<" ";
-cout<<" ";
-cout<<" ";
-cout<<" ";
+cout<<"int h=8; void Main(int a,int b) {for(int i=0;i<=3;i++) {"<<endl;
+cout<<"if(i%2==0) cout<<(char)(a+67);"<<endl;
+cout<<"else cout<<b; }}\";"<<endl;
+cout<<"void Main(int &c,char d) { {Main(c,2); "<<endl;
+cout<<"cout<<(char)(d+3); }}"<<endl;
+cout<<"void main() {"<<endl;
+cout<<"int h=5,i=9; char j='E'; "<<endl;
+cout<<"Main(i,j); Main(h,i); }"<<endl;
 
 char resp_4[40];
 e:
@@ -189,7 +191,7 @@ cout<<"Type the answer: ";
 gets(resp_4);
 
     // *** Answer 1
-if ((strcmp(resp_4," ")==0)||(strcmp(resp_4," ")==0))
+if ((strcmp(resp_4,"L2L2HH9H9")==0)||(strcmp(resp_4,"passthislevelwithpoints")==0))
     // ***
 
 cout<<"Yess!"<<endl; br
