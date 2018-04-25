@@ -1,0 +1,206 @@
+#include <iostream.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <ctype.h>
+#include <math.h>
+#include <iomanip.h>
+#include <time.h>
+#include <string.h>
+
+#define br getch();
+
+void main()
+{
+clrscr();
+
+//**********************************************************
+
+time_t timer;
+struct tm y2k = {0};
+double seconds;
+
+y2k.tm_hour = 0;   y2k.tm_min = 0; y2k.tm_sec = 0;
+y2k.tm_year = 100; y2k.tm_mon = 0; y2k.tm_mday = 1;
+
+time(&timer);  /* get current time; same as: timer = time(NULL)  */
+
+seconds = difftime(timer,mktime(&y2k));
+  
+//**********************************************************   
+cout<<" *** CyberBuzz 2k18 : Programming *** "<<endl; br
+//*****************************
+
+cout<<" ** Level 1 **"<<endl; br
+double first,timeout;
+
+cout<<endl<<"Your first question:- "<<endl;
+cout<<"There IS small penalty for wrong answer in this question"<<endl;
+cout<<"Find the number of errors of the following question and enter the answer"<<endl;
+
+    // *** Question 1
+cout<<endl<<"void main() { clrscr();";
+cout<<endl<<"int a=10, b=15, c=16;";
+cout<<endl<<"try(a,b,c);";
+cout<<endl<<"cout<<++a<<','<<','<<c<<'\n';";
+cout<<endl<<"try(b;a);";
+cout<<endl<<" getch(); }";
+cout<<endl<<endl<<"void try(int x,int &y,int z) {";
+cout<<endl<<"q=20; q+=x+y+z;";
+cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }";
+cout<<endl<<endl;
+    // ***
+
+a:
+cout<<"Type the answer: ";
+cin>>first;
+
+    // *** Answer 1
+if (first==11)
+    // ***
+
+cout<<"Correct!"<<endl;
+else
+{
+  cout<<"Wrong Answer! You have been locked out for 5 seconds!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+5;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  cout<<endl<<"5 seconds have elapsed!"<<endl; br
+  goto a;
+}
+
+// ******************************
+
+char resp2,resp2_2[20];
+clrscr();
+cout<<endl<<"Your second question:- "<<endl;
+// *** Question 2
+cout<<"Do you know anyone by the name Bjarne Stroustrup? (y-yes/n-no) "<<endl;
+// ***
+
+cout<<"Type the answer: ";
+cin>>resp2;
+if (resp2=='y')
+{c:
+  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe) (be specific!) ";
+  gets(resp2_2);
+  
+  if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
+  {
+    cout<<":P Gr8 Only one question left for this level"<<endl; br
+  }
+  else
+  {
+    cout<<"Bro, WE HATE LIARS!! YOU HAVE BEEN LOCKED OUT FOR 5 MINUTES!! .......press enter"; br
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+    timeout=seconds+300;
+    while(seconds<timeout)
+   {
+    cout<<"Liar! Liar! Pants on Fire!!"<<endl;
+    time(&timer);
+      seconds = difftime(timer,mktime(&y2k));
+   }
+   
+cout<<endl<<"5 minutes have elapsed!"<<endl; br
+  }
+}
+else
+{
+  cout<<"Really?? And you call yourself a C++ programmer!! You have been locked out for 2 minutes!!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+120;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  char resp_3;
+cout<<endl<<"2 minutes have elapsed!"<<endl; br
+cout<<endl<<"We are giving you ONE LAST CHANCE, would you like to attempt the question?"<<endl;
+cout<<"P.S.- We will throw in a bonus HINT!(y-yes/n-no) ";
+cin>>resp_3;
+if(resp_3=='y')
+goto c;
+else
+{
+cout<<"Ok! You should've known this :( He created C++!!"<<endl; br
+}
+// *************
+clrscr();
+
+cout<<endl<<"Your second last question (for this level):- "<<endl;
+cout<<"There IS small penalty for wrong answer in this question"<<endl; br
+cout<<endl<<"int swa = 7; void main() {"<<endl;
+cout<<"int a=1; const int swa =4; "<<endl;
+cout<<"for(int i=0;i<4;i++) {"<<endl;
+cout<<"if(i%2==0) a*=swa;"<<endl;
+cout<<"else a+=::swa; }"<<endl;
+cout<<"cout<<a; }"<<endl;
+int resp_3;
+d:
+cout<<"Type the answer: ";
+cin>>resp_3;
+
+    // *** Answer 3
+if (resp_3==51)
+    // ***
+
+cout<<"Correct!"<<endl; br
+else
+{
+  cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+20;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  cout<<endl<<"20 seconds have elapsed!"<<endl; br
+  goto d;
+}
+clrscr();
+
+cout<<"LAST one :P Next level will be amazing!"<<endl; br
+cout<<"There is NO penalty in this round"<<endl<<endl; br
+cout<<"You CAN USE 40 points to pass this level ;)"<<endl<<endl; br
+
+//*******************************************
+
+cout<<"int h=8; void Main(int a,int b) {for(int i=0;i<=3;i++) {"<<endl;
+cout<<"if(i%2==0) cout<<(char)(a+67);"<<endl;
+cout<<"else cout<<b; }}\";"<<endl;
+cout<<"void Main(int &c,char d) { {Main(c,2); "<<endl;
+cout<<"cout<<(char)(d+3); }}"<<endl;
+cout<<"void main() {"<<endl;
+cout<<"int h=5,i=9; char j='E'; "<<endl;
+cout<<"Main(i,j); Main(h,i); }"<<endl;
+
+char resp_4[40];
+e:
+cout<<"Type the answer: ";
+gets(resp_4);
+
+    // *** Answer 1
+if ((strcmp(resp_4,"L2L2HH9H9")==0)||(strcmp(resp_4,"passthislevelwithpoints")==0))
+    // ***
+
+cout<<"Yess!"<<endl; br
+else
+{
+  goto e;
+}
+cout<<"Now we will print the password for next file, make sure others don't see it, PRESS ENTER"<<endl; br
+cout<<"lovefortnite";
+}
+br
+}
