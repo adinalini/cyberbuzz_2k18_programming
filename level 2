@@ -31,69 +31,137 @@ seconds = difftime(timer,mktime(&y2k));
 cout<<" *** CyberBuzz 2k18 : Programming *** "<<endl; br
 //*****************************
 
-cout<<" ** Level 1 **"<<endl; br
-double first,timeout;
+cout<<" ** Level 2 **"<<endl; br
+double timeout,points;
+char first[30];
+
+cout<<endl<<"Call any volunteer/head to proceed ";
+cin>>points;
+
+cout<<endl<<endl<<"Second round is special as in you can use your prelims points here!";
+cout<<endl<<"You have "<<points<<" points! Best of Luck!"; br
+clrscr();
 
 cout<<endl<<"Your first question:- "<<endl;
-cout<<"There IS small penalty for wrong answer in this question"<<endl;
+cout<<"There IS HUGE Penalty for wrong answer in this question"<<endl;
 cout<<"Find the number of errors of the following question and enter the answer"<<endl;
 
     // *** Question 1
-cout<<endl<<"void main() { clrscr();";
-cout<<endl<<"int a=10, b=15, c=16;";
-cout<<endl<<"try(a,b,c);";
-cout<<endl<<"cout<<++a<<','<<','<<c<<'\n';";
-cout<<endl<<"try(b;a);";
-cout<<endl<<" getch(); }";
-cout<<endl<<endl<<"void try(int x,int &y,int z) {";
-cout<<endl<<"q=20; q+=x+y+z;";
-cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }";
-cout<<endl<<endl;
+cout<<endl<<"void main() { int j,temp,Marks[] = { 99, 92, 94, 96, 93, 95 }, cb[6]; ";
+cout<<endl<<"for(int i=0;i<6;i++) { if(i-3<0) cb[i] = Marks[1 + random(2)]; ";
+cout<<endl<<"else cb[i]=(rand()%10)*i; }";
+cout<<endl<<"for(i=0;i<6;i++) {cin>>cb[i]; }";
+cout<<endl<<"for(int i=1;i<=5;i++) {temp=cb[i]; j=i-1;";
+cout<<endl<<"while((temp<a[j])&&(j>=0)) {cb[j+1]=cb[j]; j=j-1; } ";
+cout<<endl<<"cb[j+1]=temp; }";
+cout<<endl<<"for(int k=0;k<6;k++) {cout<<cb[k]; }} ";
     // ***
+    
+   cout<<endl<<endl<<"Which sorting code is used above ? ";
+   cout<<endl<<"1. Bubble 2. Selection 3. Insertion";
+ cout<<endl
 
+    
 a:
 cout<<"Type the answer: ";
-cin>>first;
+gets(first);
 
     // *** Answer 1
-if (first==11)
+if ((strcmp(first,"bubble")==0)||(strcmp(first,"Bubble")==0)||(strcmp(first,"1")==0))
+    // ***
     // ***
 
 cout<<"Correct!"<<endl;
 else
 {
-  cout<<"Wrong Answer! You have been locked out for 5 seconds!"<<endl;
+  cout<<"Wrong Answer! You have been locked out for 6 minutes!"<<endl;
   time(&timer);
   seconds = difftime(timer,mktime(&y2k));
-  timeout=seconds+5;
+  timeout=seconds+360;
   while(seconds<timeout)
   {
+  cout<<endl<<"You can use 35 points to skip this wait!";
     time(&timer);
     seconds = difftime(timer,mktime(&y2k));
   }
-  cout<<endl<<"5 seconds have elapsed!"<<endl; br
+  cout<<endl<<"6 minutes have elapsed!"<<endl; br
   goto a;
 }
 
 // ******************************
 
+cout<<endl<<"Your second question:- "<<endl;
+cout<<"There IS small penalty for wrong answer in this question"<<endl; br
+cout<<endl<<"int swa = 7; void main() {"<<endl;
+cout<<"int a=1; const int swa =4; "<<endl;
+cout<<"for(int i=0;i<4;i++) {"<<endl;
+cout<<"if(i%2==0) a*=swa;"<<endl;
+cout<<"else a+=::swa; }"<<endl;
+cout<<"cout<<a; }"<<endl;
+int resp_3;
+d:
+cout<<"Type the answer: ";
+cin>>resp_3;
+
+    // *** Answer 3
+if (resp_3==51)
+    // ***
+
+cout<<"Correct!"<<endl; br
+else
+{
+  cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
+  time(&timer);
+  seconds = difftime(timer,mktime(&y2k));
+  timeout=seconds+20;
+  while(seconds<timeout)
+  {
+    time(&timer);
+    seconds = difftime(timer,mktime(&y2k));
+  }
+  cout<<endl<<"20 seconds have elapsed!"<<endl; br
+  goto d;
+}
+clrscr();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 char resp2,resp2_2[20];
 clrscr();
-cout<<endl<<"Your second question:- "<<endl;
-// *** Question 2
-cout<<"Do you know anyone by the name Bjarne Stroustrup? (y-yes/n-no) "<<endl;
+cout<<endl<<"Your third question is an ALL IN round, double or lose your points!"<<endl;
+// *** Question 3
+cout<<" However, if you choose not to attempt this question, you still lose half your points :P"<<endl;
 // ***
-
+cout<<"Would you like to attempt? (y-yes/n-no)"<<endl;
 cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
 {c:
-  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe) (be specific!) ";
+  cout<<"Yeah! question goes here";
   gets(resp2_2);
   
   if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
   {
-    cout<<":P Gr8 Only one question left for this level"<<endl; br
+    cout<<"Correct! :P You double your points!"<<endl; br
   }
   else
   {
@@ -136,39 +204,7 @@ cout<<"Ok! You should've known this :( He created C++!!"<<endl; br
 // *************
 clrscr();
 
-cout<<endl<<"Your second last question (for this level):- "<<endl;
-cout<<"There IS small penalty for wrong answer in this question"<<endl; br
-cout<<endl<<"int swa = 7; void main() {"<<endl;
-cout<<"int a=1; const int swa =4; "<<endl;
-cout<<"for(int i=0;i<4;i++) {"<<endl;
-cout<<"if(i%2==0) a*=swa;"<<endl;
-cout<<"else a+=::swa; }"<<endl;
-cout<<"cout<<a; }"<<endl;
-int resp_3;
-d:
-cout<<"Type the answer: ";
-cin>>resp_3;
 
-    // *** Answer 3
-if (resp_3==51)
-    // ***
-
-cout<<"Correct!"<<endl; br
-else
-{
-  cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
-  time(&timer);
-  seconds = difftime(timer,mktime(&y2k));
-  timeout=seconds+20;
-  while(seconds<timeout)
-  {
-    time(&timer);
-    seconds = difftime(timer,mktime(&y2k));
-  }
-  cout<<endl<<"20 seconds have elapsed!"<<endl; br
-  goto d;
-}
-clrscr();
 
 cout<<"LAST one :P Next level will be amazing!"<<endl; br
 cout<<"There is NO penalty in this round"<<endl<<endl; br
