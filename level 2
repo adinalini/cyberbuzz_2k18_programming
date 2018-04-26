@@ -135,9 +135,7 @@ if(sec_w_op_check==1)
 {
 points+=gamble2;
 cout<<endl<<"Your points have increased by "<<gamble2<<", New amount= "<<points;
-}
-
-}
+}}
 else
 {
   cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
@@ -176,28 +174,19 @@ if (resp2=='y')
   
   if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
   {
-    cout<<"Correct! :P You double your points!"<<endl; br
+    cout<<endl<<"Correct! :P You double your points!"<<endl; br
     points*=2;
   }
   else
   {
-    cout<<"Bro, WE HATE LIARS!! YOU HAVE BEEN LOCKED OUT FOR 5 MINUTES!! .......press enter"; br
-    time(&timer);
-    seconds = difftime(timer,mktime(&y2k));
-    timeout=seconds+300;
-    while(seconds<timeout)
-   {
-    cout<<"Liar! Liar! Pants on Fire!!"<<endl;
-    time(&timer);
-      seconds = difftime(timer,mktime(&y2k));
-   }
-   
-cout<<endl<<"5 minutes have elapsed!"<<endl; br
+  cout<<endl<<"Woops! You lose all your points :(";
+  cout<<endl;
+  points=0;
   }
 }
 else
 {
-  cout<<"Hmmm..... You lose half your points!"<<endl;
+  cout<<endl<<"Hmmm..... You lose half your points!"<<endl;
   points/=2;
 }
 // *************
