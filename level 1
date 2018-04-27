@@ -107,7 +107,7 @@ if (resp2=='y')
     time(&timer);
       seconds = difftime(timer,mktime(&y2k));
    }
-   
+
 cout<<endl<<"5 minutes have elapsed!"<<endl; br
   }
 }
@@ -133,6 +133,7 @@ else
 {
 cout<<"Ok! You should've known this :( He created C++!!"<<endl; br
 }
+}
 // *************
 clrscr();
 
@@ -153,7 +154,9 @@ cin>>resp_5;
 if (resp_5==51)
     // ***
 
-{ cout<<"Correct!"<<endl; br }
+{
+cout<<"Correct!"<<endl; br
+}
 else
 {
   cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
@@ -202,6 +205,8 @@ else
 }
 cout<<"Now we will print the password for next file, make sure others don't see it, PRESS ENTER"<<endl; br
 cout<<"lovefortnite";
-}
+
 br
 }
+
+
