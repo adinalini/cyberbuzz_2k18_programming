@@ -114,19 +114,16 @@ cin>>gamble2;
 }
 
 cout<<endl;
-cout<<endl<<" "<<endl;
-cout<<" "<<endl;
-cout<<" "<<endl;
-cout<<" "<<endl;
-cout<<" "<<endl;
-cout<<" "<<endl;
+cout<<endl<<"Which is better for storing passwords?"<<endl;
+cout<<"(a-char array, b-char string)"<<endl;
+
 int resp_3;
-d:
+
 cout<<"Type the answer: ";
 cin>>resp_3;
 
     // *** Answer 3
-if (resp_3==xXx)
+if (resp_3=='a')
     // ***
 {
 cout<<"Correct!"<<endl; br
@@ -137,17 +134,8 @@ cout<<endl<<"Your points have increased by "<<gamble2<<", New amount= "<<points;
 }}
 else
 {
-  cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
-  time(&timer);
-  seconds = difftime(timer,mktime(&y2k));
-  timeout=seconds+20;
-  while(seconds<timeout)
-  {
-    time(&timer);
-    seconds = difftime(timer,mktime(&y2k));
-  }
-  cout<<endl<<"20 seconds have elapsed!"<<endl; br
-  goto d;
+cout<<endl<<"Woops! You lose "<<gamble2<<" points!";
+points-=gamble2;
 }
 clrscr();
 
@@ -231,7 +219,7 @@ else
 {
   goto e;
 }
-
+  
 char check_r2[20];
 p:
 cout<<"Call any volunteer/event head to continue ";
