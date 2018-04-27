@@ -39,7 +39,7 @@ cout<<endl<<"Call any volunteer/head to proceed ";
 cin>>points;
 
 cout<<endl<<endl<<"Second round is special as in you can use your prelims points here!";
-cout<<endl<<"You have "<<points<<" points! Best of Luck!"; br
+cout<<endl<<"You have "<<points<<" Points! Best of Luck!"; br
 clrscr();
 
 cout<<endl<<"Your first question:- "<<endl;
@@ -67,7 +67,7 @@ cout<<"Type the answer: ";
 gets(first);
 
     // *** Answer 1
-if ((strcmp(first,"bubble")==0)||(strcmp(first,"Bubble")==0)||(strcmp(first,"1")==0))
+if ((strcmp(first,"insertion")==0)||(strcmp(first,"Insertion")==0)||(strcmp(first,"3")==0))
     // ***
     // ***
     
@@ -111,7 +111,6 @@ if(sec_w_op='y')
 sec_w_op_check=1;
 cout<<endl<<"Cool, you have "<<points<<", enter your gamble amount ";
 cin>>gamble2;
-
 }
 
 cout<<endl;
@@ -152,9 +151,6 @@ else
 }
 clrscr();
 
-
-
-
 char resp2,resp2_2[20];
 clrscr();
 cout<<endl<<"Your third question is an ALL IN round, double or lose your points!"<<endl;
@@ -166,13 +162,21 @@ cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
 {
-  cout<<"Yeah! question goes here";
- c:
- 
- cout<<"Enter your answer ";
+  cout<<"Yeah! Find out the output and call a volunteer to answer"<<endl;
+  cout<<endl<<"void main() {int a=0,b=1;";
+  cout<<endl<<"int f; n=20;";
+  cout<<endl<<"for(int d=0;d<3;d++) { cout<<\" \";";
+  cout<<endl<<"for(int j=0;j<d;j++) {";
+  cout<<endl<<"for(int k=0;k<2*d;k++) {cout<<\"*\";";
+  cout<<endl<<"cout<<a<<b; cout<<\"desi shopkeepers\";";
+  cout<<endl<<"while(b>0) cout<<n; }";
+  cout<<endl<<"cout<<"cyberbuzz"; }}";
+  cout<<endl<<"getch(); } ";
+  
+ cout<<"Call event head/member ";
  gets(resp2_2);
   
-  if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
+  if((strcmp(resp2_2,"congratz")==0)||(strcmp(resp2_2,"pokemon")==0)||(strcmp(resp2_2,"bitcoin")==0))
   {
     cout<<endl<<"Correct! :P You double your points!"<<endl; br
     points*=2;
@@ -192,13 +196,11 @@ else
 // *************
 clrscr();
 
-
-
 cout<<"LAST one :P Next level will be final!"<<endl; br
 cout<<"No gamble here :("<<endl<<endl; br
 if(points>=40)
 {
-cout<<"You CAN USE 40 points to pass this level ;)"<<endl br
+cout<<"You CAN USE 40 points to skip this level ;)"<<endl br
 cout<<"You can skip anytime by entering 'skip' when asked for answer"<<endl; br
 }
 //*******************************************
