@@ -42,9 +42,9 @@ cout<<"Find the number of errors of the following question and enter the answer"
 cout<<endl<<"void main() { clrscr();";
 cout<<endl<<"int a=10, b=15, c=16;";
 cout<<endl<<"try(a,b,c);";
-cout<<endl<<"cout<<++a<<','<<','<<c<<'\n';";
+cout<<endl<<"cout<<++a<<','<<','<<c<<' ';"<<endl;
 cout<<endl<<"try(b;a);";
-cout<<endl<<" getch(); }";
+cout<<endl<<"getch(); }";
 cout<<endl<<endl<<"void try(int x,int &y,int z) {";
 cout<<endl<<"q=20; q+=x+y+z;";
 cout<<endl<<"cout<<x<<','<<y<<','<<z<<endl; }";
@@ -88,7 +88,7 @@ cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
 {c:
-  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe) (be specific!) ";
+  cout<<"We thought so! Tell us what did he create (HINT: Very useful in C++ Universe)"<<endl<<"(be specific!) ";
   gets(resp2_2);
   
   if((strcmp(resp2_2,"C++")==0)||(strcmp(resp2_2,"c++")==0)||(strcmp(resp2_2,"cplusplus")==0))
@@ -203,7 +203,7 @@ else
 {
   goto e;
 }
-cout<<"Now we will print the password for next file, make sure others don't see it, PRESS ENTER"<<endl; br
+cout<<"Now we will print the password for next file, make sure others don't see it"<<endl<<"PRESS ENTER"<<endl; br
 cout<<"lovefortnite";
 
 br
