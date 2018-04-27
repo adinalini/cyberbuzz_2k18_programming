@@ -144,16 +144,16 @@ cout<<"for(int i=0;i<4;i++) {"<<endl;
 cout<<"if(i%2==0) a*=swa;"<<endl;
 cout<<"else a+=::swa; }"<<endl;
 cout<<"cout<<a; }"<<endl;
-int resp_3;
+int resp_5;
 d:
 cout<<"Type the answer: ";
-cin>>resp_3;
+cin>>resp_5;
 
     // *** Answer 3
-if (resp_3==51)
+if (resp_5==51)
     // ***
 
-cout<<"Correct!"<<endl; br
+{ cout<<"Correct!"<<endl; br }
 else
 {
   cout<<"Wrong Answer! You have been locked out for 20 seconds!"<<endl;
@@ -193,8 +193,9 @@ gets(resp_4);
     // *** Answer 1
 if ((strcmp(resp_4,"L2L2HH9H9")==0)||(strcmp(resp_4,"passthislevelwithpoints")==0))
     // ***
-
+{
 cout<<"Yess!"<<endl; br
+}
 else
 {
   goto e;
