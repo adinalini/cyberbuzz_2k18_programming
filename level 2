@@ -61,44 +61,45 @@ cout<<endl<<"for(int k=0;k<6;k++) {cout<<cb[k]; }} ";
    cout<<endl<<"1. Bubble 2. Selection 3. Insertion";
  cout<<endl;
 
-    
+
 a:
 cout<<"Type the answer: ";
 gets(first);
-
+char skip_p;
     // *** Answer 1
 if ((strcmp(first,"insertion")==0)||(strcmp(first,"Insertion")==0)||(strcmp(first,"3")==0))
     // ***
     // ***
-    
-char skip_p;
+
+
 cout<<"Correct!"<<endl;
+
 else
 {
-  cout<<"Wrong Answer!"<<endl;
+	cout<<"Wrong Answer!"<<endl;
   if(points>=35)
   {
-  cout<<"Enter p to use 35 points and continue or anything else to wait 6 mins ";
-  cin>>skip_p;
-  
+	cout<<"Enter p to use 35 points and continue or anything else to wait 6 mins ";
+	cin>>skip_p;
+
   if((skip_p='p')||(skip_p='P'))
-  goto r;
+	goto r;
   }
-  You have been locked out for 6 minutes!"<<endl;
-  time(&timer);
-  seconds = difftime(timer,mktime(&y2k));
-  timeout=seconds+360;
+	cout<<"You have been locked out for 6 minutes!"<<endl;
+	time(&timer);
+	seconds = difftime(timer,mktime(&y2k));
+	timeout=seconds+360;
   while(seconds<timeout)
   {
-  cout<<endl<<"You can use 35 points to skip this wait!";
-    time(&timer);
-    seconds = difftime(timer,mktime(&y2k));
+	time(&timer);
+	seconds = difftime(timer,mktime(&y2k));
   }
-  cout<<endl<<"6 minutes have elapsed!"<<endl; br
-  goto a;
+	 cout<<endl<<"6 minutes have elapsed!"<<endl; br
+	goto a;
 }
 
 // ******************************
+clrscr();
 r:
 char sec_w_op;
 int sec_w_op_check=0,gamble2;
@@ -106,7 +107,7 @@ cout<<endl<<"Your second question:- "<<endl;
 cout<<"This question allows you to wager your points, would you like to wager some? (y-yes/n-no) ";
 cin>>sec_w_op;
 
-if(sec_w_op='y')
+if(sec_w_op=='y')
 {
 sec_w_op_check=1;
 cout<<endl<<"Cool, you have "<<points<<", enter your gamble amount ";
@@ -117,7 +118,7 @@ cout<<endl;
 cout<<endl<<"Which is better for storing passwords?"<<endl;
 cout<<"(a-char array, b-char string)"<<endl;
 
-int resp_3;
+char resp_3;
 
 cout<<"Type the answer: ";
 cin>>resp_3;
@@ -131,11 +132,16 @@ if(sec_w_op_check==1)
 {
 points+=gamble2;
 cout<<endl<<"Your points have increased by "<<gamble2<<", New amount= "<<points;
-}}
+}
+}
 else
 {
-cout<<endl<<"Woops! You lose "<<gamble2<<" points!";
+cout<<endl<<"Wrong Answer";
+	if(sec_w_op_check==1)
+{
+cout<<endl<<"You lose "<<gamble2<<" points!";
 points-=gamble2;
+}
 }
 clrscr();
 
@@ -150,29 +156,29 @@ cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
 {
-  cout<<"Yeah! Find out the output and call a volunteer to answer"<<endl;
-  cout<<endl<<"void main() {int a=0,b=1;";
-  cout<<endl<<"int f; n=20;";
-  cout<<endl<<"for(int d=0;d<3;d++) { cout<<\" \";";
-  cout<<endl<<"for(int j=0;j<d;j++) {";
-  cout<<endl<<"for(int k=0;k<2*d;k++) {cout<<\"*\";";
-  cout<<endl<<"cout<<a<<b; cout<<\"desi shopkeepers\";";
-  cout<<endl<<"while(b>0) cout<<n; }";
-  cout<<endl<<"cout<<"cyberbuzz"; }}";
-  cout<<endl<<"getch(); } ";
+  	cout<<"Yeah! Find out the output and call a volunteer to answer"<<endl;
+  	cout<<endl<<"void main() {int a=0,b=1;";
+  	cout<<endl<<"int f; n=20;";
+  	cout<<endl<<"for(int d=0;d<3;d++) { cout<<\" \";";
+  	cout<<endl<<"for(int j=0;j<d;j++) {";
+  	cout<<endl<<"for(int k=0;k<2*d;k++) {cout<<\"*\";";
+  	cout<<endl<<"cout<<a<<b; cout<<\"desi shopkeepers\";";
+  	cout<<endl<<"while(b>0) cout<<n; }";
+  	cout<<endl<<"cout<<\"cyberbuzz\"; }}";
+  	cout<<endl<<"getch(); } ";
   
- cout<<"Call event head/member ";
+ 	cout<<"Call event head/member ";
  gets(resp2_2);
   
   if((strcmp(resp2_2,"congratz")==0)||(strcmp(resp2_2,"pokemon")==0)||(strcmp(resp2_2,"bitcoin")==0))
   {
-    cout<<endl<<"Correct! :P You double your points!"<<endl; br
-    points*=2;
+   	 cout<<endl<<"Correct! :P You double your points!"<<endl; br
+   	 points*=2;
   }
   else
   {
-  cout<<endl<<"Woops! You lose all your points :(";
-  cout<<endl;
+  	cout<<endl<<"Woops! You lose all your points :(";
+  	cout<<endl;
   points=0;
   }
 }
@@ -188,7 +194,7 @@ cout<<"LAST one :P Next level will be final!"<<endl; br
 cout<<"No gamble here :("<<endl<<endl; br
 if(points>=40)
 {
-cout<<"You CAN USE 40 points to skip this level ;)"<<endl br
+cout<<"You CAN USE 40 points to skip this level ;)"<<endl; br
 cout<<"You can skip anytime by entering 'skip' when asked for answer"<<endl; br
 }
 //*******************************************
@@ -212,12 +218,12 @@ if ((strcmp(resp_4,"L2L2HH9H9")==0)||((strcmp(resp_4,"skip")==0)&&(points>=40)))
     // ***
 {
 cout<<"Yess!"<<endl; br
-if (strcmp(resp_4,"skip")==0)
+if ((strcmp(resp_4,"skip")==0))
 points-=40;
 }
 else
 {
-  goto e;
+  	goto e;
 }
   
 char check_r2[20];
@@ -228,11 +234,10 @@ gets(check_r2);
 if(strcmp(check_r2,"balance")==0)
 {
 cout<<"The balance for this team is "<<points; br
-cout<<endl<<endl<<"Now we will print the password for next file, make sure others don't see it, PRESS ENTER"<<endl; br
+cout<<endl<<endl<<"Now we will print the password for next file, make sure others don't see it"<<endl<<"PRESS ENTER"<<endl; br
 cout<<"thelevelhasnotended";
 }
 else
 goto p;
-}
 br
 }
