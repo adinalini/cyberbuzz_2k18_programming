@@ -82,8 +82,11 @@ else
 	cout<<"Enter p to use 35 points and continue or anything else to wait 6 mins ";
 	cin>>skip_p;
 
-  if((skip_p='p')||(skip_p='P'))
-	goto r;
+	if ((skip_p = 'p') || (skip_p = 'P'))
+	{
+		goto r;
+		points -= 35;
+	}
   }
 	cout<<"You have been locked out for 6 minutes!"<<endl;
 	time(&timer);
@@ -99,8 +102,9 @@ else
 }
 
 // ******************************
-clrscr();
 r:
+clrscr();
+
 char sec_w_op;
 int sec_w_op_check=0,gamble2;
 cout<<endl<<"Your second question:- "<<endl;
@@ -142,6 +146,20 @@ cout<<endl<<"Wrong Answer";
 cout<<endl<<"You lose "<<gamble2<<" points!";
 points-=gamble2;
 }
+	else
+	{
+		cout << endl << "Since you didn't bet anything and its a wrong answer, so.... wait 5 mins!!" << endl;
+		time(&timer);
+		seconds = difftime(timer, mktime(&y2k));
+		timeout = seconds + 300;
+		while (seconds<timeout)
+		{
+			time(&timer);
+			seconds = difftime(timer, mktime(&y2k));
+		}
+		cout << endl << "5 minutes have elapsed!" << endl; br
+
+	}
 }
 clrscr();
 
@@ -188,6 +206,7 @@ else
   points/=2;
 }
 // *************
+br
 clrscr();
 
 cout<<"LAST one :P Next level will be final!"<<endl; br
@@ -195,7 +214,7 @@ cout<<"No gamble here :("<<endl<<endl; br
 if(points>=40)
 {
 cout<<"You CAN USE 40 points to skip this level ;)"<<endl; br
-cout<<"You can skip anytime by entering 'skip' when asked for answer"<<endl; br
+cout<<"You can skip anytime by entering 'skip' when asked for answer"<<endl<<endl; br
 }
 //*******************************************
 
@@ -241,3 +260,5 @@ else
 goto p;
 br
 }
+
+
