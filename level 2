@@ -82,10 +82,10 @@ else
 	cout<<"Enter p to use 35 points and continue or anything else to wait 6 mins ";
 	cin>>skip_p;
 
-	if ((skip_p = 'p') || (skip_p = 'P'))
+	if ((skip_p == 'p') || (skip_p == 'P'))
 	{
-		goto r;
 		points -= 35;
+		goto r;
 	}
   }
 	cout<<"You have been locked out for 6 minutes!"<<endl;
@@ -99,6 +99,7 @@ else
   }
 	 cout<<endl<<"6 minutes have elapsed!"<<endl; br
 	goto a;
+
 }
 
 // ******************************
@@ -131,11 +132,11 @@ cin>>resp_3;
 if (resp_3=='a')
     // ***
 {
-cout<<"Correct!"<<endl; br
+cout<<"Correct!"<<endl;
 if(sec_w_op_check==1)
 {
 points+=gamble2;
-cout<<endl<<"Your points have increased by "<<gamble2<<", New amount= "<<points;
+cout<<endl<<"Your points have increased by "<<gamble2<<", New amount= "<<points; br
 }
 }
 else
@@ -157,46 +158,46 @@ points-=gamble2;
 			time(&timer);
 			seconds = difftime(timer, mktime(&y2k));
 		}
-		cout << endl << "5 minutes have elapsed!" << endl; br
+		cout << endl << "5 minutes have elapsed!" << endl;
 
 	}
 }
-clrscr();
+br
 
 char resp2,resp2_2[20];
 clrscr();
 cout<<endl<<"Your third question is an ALL IN round, double or lose your points!"<<endl;
 // *** Question 3
-cout<<" However, if you choose not to attempt this question, you still lose half your points :P"<<endl;
+cout<<" However, if you choose not to attempt this question, you still lose half your"<<endl<<"points :P"<<endl;
 // ***
 cout<<"Would you like to attempt? (y-yes/n-no)"<<endl;
 cout<<"Type the answer: ";
 cin>>resp2;
 if (resp2=='y')
 {
-  	cout<<"Yeah! Find out the output and call a volunteer to answer"<<endl;
-  	cout<<endl<<"void main() {int a=0,b=1;";
-  	cout<<endl<<"int f; n=20;";
-  	cout<<endl<<"for(int d=0;d<3;d++) { cout<<\" \";";
-  	cout<<endl<<"for(int j=0;j<d;j++) {";
-  	cout<<endl<<"for(int k=0;k<2*d;k++) {cout<<\"*\";";
-  	cout<<endl<<"cout<<a<<b; cout<<\"desi shopkeepers\";";
-  	cout<<endl<<"while(b>0) cout<<n; }";
-  	cout<<endl<<"cout<<\"cyberbuzz\"; }}";
-  	cout<<endl<<"getch(); } ";
-  
- 	cout<<"Call event head/member ";
+	cout<<"Yeah! Find out the output and call a volunteer to answer"<<endl;
+	cout<<endl<<"void main() {int a=0,b=1;";
+	cout<<endl<<"int f; n=20;";
+	cout<<endl<<"for(int d=0;d<3;d++) { cout<<\" \";";
+	cout<<endl<<"for(int j=0;j<d;j++) {";
+	cout<<endl<<"for(int k=0;k<2*d;k++) {cout<<\"*\";";
+	cout<<endl<<"cout<<a<<b; cout<<\"desi shopkeepers\";";
+	cout<<endl<<"while(b>0) cout<<n; }";
+	cout<<endl<<"cout<<\"cyberbuzz\"; }}";
+	cout<<endl<<"getch(); } ";
+
+	cout<<"Call event head/member ";
  gets(resp2_2);
-  
+
   if((strcmp(resp2_2,"congratz")==0)||(strcmp(resp2_2,"pokemon")==0)||(strcmp(resp2_2,"bitcoin")==0))
   {
-   	 cout<<endl<<"Correct! :P You double your points!"<<endl; br
-   	 points*=2;
+	 cout<<endl<<"Correct! :P You double your points!"<<endl;
+	 points*=2;
   }
   else
   {
-  	cout<<endl<<"Woops! You lose all your points :(";
-  	cout<<endl;
+	cout<<endl<<"Woops! You lose all your points :(";
+	cout<<endl;
   points=0;
   }
 }
